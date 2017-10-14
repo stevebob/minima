@@ -3,45 +3,20 @@
   <div class="wrapper">
 
     <div class="footer-col-wrapper">
-      <div class="footer-col footer-col-1">
-        <ul class="contact-list">
-          <li>
-            {% if site.author %}
-              {{ site.author | escape }}
-            {% else %}
-              {{ site.title | escape }}
-            {% endif %}
-            </li>
-            {% if site.email %}
-            <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
-            {% endif %}
-        </ul>
-      </div>
+      <div class="social-media-container">
 
-      <div class="footer-col footer-col-2">
-        <ul class="social-media-list">
+          {% include icon-rss.html username="feed.xml" %}
+
           {% if site.github_username %}
-          <li>
             {% include icon-github.html username=site.github_username %}
-          </li>
           {% endif %}
+
+          {% include icon-email.html username=site.email %}
 
           {% if site.twitter_username %}
-          <li>
             {% include icon-twitter.html username=site.twitter_username %}
-          </li>
           {% endif %}
 
-          {% if site.itch_username %}
-          <li>
-            {% include icon-itch.html username=site.itch_username %}
-          </li>
-          {% endif %}
-        </ul>
-      </div>
-
-      <div class="footer-col footer-col-3">
-        <p>{{ site.description | escape }}</p>
       </div>
     </div>
 

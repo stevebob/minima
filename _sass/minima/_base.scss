@@ -198,11 +198,17 @@ pre {
 .icon > svg {
   display: inline-block;
   vertical-align: middle;
-
+  width: $icon-size;
+  height: $icon-size;
   path {
     fill: $grey-color;
   }
 }
+
+.social-media-container {
+    padding-left: 5px;
+}
+
 
 .social-media-list {
   .icon {
